@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(20, 40px);
+      gap: 5px;
+    }
+
+    .square {
+      width: 40px;
+      height: 40px;
+      background-color: #3498db;
+      transition: background-color 1s ease; /* Smooth transition for 1 second */
+    }
+
+    .square:hover {
+      background-color: #e74c3c;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <div class="container">
+    <!-- Generate 800 boxes using JavaScript -->
+  </div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.querySelector(".container");
+
+      // Generate 800 boxes
+      for (let i = 0; i < 800; i++) {
+        const square = document.createElement("div");
+        square.classList.add("square");
+        container.appendChild(square);
+      }
+    });
+  </script>
 </body>
-
 </html>
